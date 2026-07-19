@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoxTab YouTube Browser</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Lucide Icons for nice UI icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="browser-container">
+    <!-- 1. Firefox風 タブバー -->
+    <header class="tab-bar">
+      <div class="tabs-container" id="tabs-container">
+        <!-- JavaScriptでタブが動的に追加されます -->
+      </div>
+      <button class="add-tab-btn" id="add-tab-btn" title="新しいタブを開く">
+        <i data-lucide="plus"></i>
+      </button>
+    </header>
+
+    <!-- 2. ナビゲーション＆アドレスバー -->
+    <div class="toolbar">
+      <div class="nav-buttons">
+        <button class="nav-btn" id="back-btn" disabled title="戻る">
+          <i data-lucide="arrow-left"></i>
+        </button>
+        <button class="nav-btn" id="forward-btn" disabled title="進む">
+          <i data-lucide="arrow-right"></i>
+        </button>
+        <button class="nav-btn" id="refresh-btn" title="更新">
+          <i data-lucide="rotate-cw"></i>
+        </button>
+        <button class="nav-btn" id="home-btn" title="ホーム（新しいタブ）">
+          <i data-lucide="home"></i>
+        </button>
+      </div>
+      
+      <div class="address-bar-container">
+        <i data-lucide="globe" class="address-icon"></i>
+        <input type="text" id="address-input" class="address-input" placeholder="検索キーワードを入力するか、URLを入力...">
+        <button class="search-go-btn" id="search-go-btn" title="検索を実行">
+          <i data-lucide="search"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- 3. ブックマークバー -->
+    <div class="bookmark-bar">
+      <button class="bookmark-item" data-query="Lofi Girl">
+        <i data-lucide="music"></i> Lofi Girl
+      </button>
+      <button class="bookmark-item" data-query="Synthwave Beats">
+        <i data-lucide="sparkles"></i> Synthwave
+      </button>
+      <button class="bookmark-item" data-query="Kyoto Rain Ambient">
+        <i data-lucide="cloud-rain"></i> Kyoto Rain
+      </button>
+      <button class="bookmark-item" data-query="React Tutorial 2026">
+        <i data-lucide="code"></i> Reactチュートリアル
+      </button>
+      <button class="bookmark-item" data-query="Deep Space Spaceflight">
+        <i data-lucide="orbit"></i> 宇宙映像
+      </button>
+    </div>
+
+    <!-- 4. メインコンテンツエリア -->
+    <main class="content-area" id="content-area">
+      <!-- JavaScriptによって以下の3つの画面が切り替わります -->
+    </main>
+  </div>
+
+  <!-- Lucide アイコンのレンダリング初期化 -->
+  <script>
+    lucide.createIcons();
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>

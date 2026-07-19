@@ -1,0 +1,16 @@
+# Cloudflare Workers 設定ファイル (wrangler.toml)
+
+name = "youtube-api-proxy"
+main = "src/index.js"
+compatibility_date = "2026-07-17"
+
+[vars]
+# YouTube APIキー（開発用または平文の場合。通常はシークレットとして設定します）
+# シークレットにする場合は「wrangler secret put YOUTUBE_API_KEY」を実行してください。
+# YOUTUBE_API_KEY = "Your-YouTube-API-Key"
+
+[[kv_namespaces]]
+# バインディング名をフロントコードと同じ「YOUTUBE_CACHE」に設定します。
+binding = "YOUTUBE_CACHE"
+# Workers KV 画面で作成した KV Namespace の ID をここに設定します。
+id = "YOUR_KV_NAMESPACE_ID_HERE"

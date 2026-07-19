@@ -1,0 +1,6 @@
+{
+  "name": "FoxTab YouTube Browser",
+  "description": "Firefox風の複数タブUIを持ち、YouTube風動画検索と埋め込みプレイヤー再生ができるモダンなWebブラウザシミュレーター。Cloudflare Workers用のコード書き出し機能も搭載。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
